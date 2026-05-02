@@ -1,0 +1,90 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Architecture">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Frontend -->
+        <mxCell id="2" value="Frontend&#xa;(React + Vite)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Backend -->
+        <mxCell id="3" value="Backend&#xa;(Spring Boot)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="140" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrow Frontend -> Backend -->
+        <mxCell id="4" style="endArrow=block;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Controller -->
+        <mxCell id="5" value="Controller Layer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="260" width="150" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Service -->
+        <mxCell id="6" value="Service Layer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="260" width="150" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Security -->
+        <mxCell id="7" value="Security (JWT)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="260" width="150" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Backend to layers -->
+        <mxCell id="8" style="endArrow=block;" edge="1" parent="1" source="3" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="9" style="endArrow=block;" edge="1" parent="1" source="3" target="6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="10" style="endArrow=block;" edge="1" parent="1" source="3" target="7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Repository -->
+        <mxCell id="11" value="Repository&#xa;(Spring Data JPA)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="360" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrows to Repository -->
+        <mxCell id="12" style="endArrow=block;" edge="1" parent="1" source="5" target="11">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="13" style="endArrow=block;" edge="1" parent="1" source="6" target="11">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="14" style="endArrow=block;" edge="1" parent="1" source="7" target="11">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Database -->
+        <mxCell id="15" value="Database&#xa;(PostgreSQL)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="460" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="16" style="endArrow=block;" edge="1" parent="1" source="11" target="15">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Redis -->
+        <mxCell id="17" value="Redis Cache&#xa;(Book Location)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="560" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="18" style="endArrow=block;" edge="1" parent="1" source="15" target="17">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
